@@ -1,0 +1,477 @@
+html,body,.main{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: #332727;
+}
+#page1{
+	background: url(../img/bg.jpg) no-repeat;
+	background-size: 100% 100%;
+	-webkit-animation: rollIn 1s 0s both;
+	animation: rollIn 1s 0s both;
+}
+#page2{
+	background: url(../img/bg1.jpg) no-repeat;
+	background-size: 100% 100%;
+	-webkit-animation: rotateInDownLeft 1s 0s both;
+	animation: rotateInDownLeft 1s 0s both;
+}
+#page3{
+	background: url(../img/bg2.jpg) no-repeat;
+	background-size: 100% 100%;
+	-webkit-animation: rotateInDownRight 1s 0s both;
+	animation: rotateInDownRight 1s 0s both;
+}
+#page4{
+	background: url(../img/bg3.jpg) no-repeat;
+	background-size: 100% 100%;
+	-webkit-animation: rollIn 1s 0s both;
+	animation: rollIn 1s 0s both;
+}
+#page5{
+	background: url(../img/bg4.jpg) no-repeat;
+	background-size: 100% 100%;
+	-webkit-animation: fadeInLeftBig 1s 0s both;
+	animation: fadeInLeftBig 1s 0s both;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+.bg,.music,.slide h1,.up,.newIfy,.about,.detail,.cotton,.detail2,.detail2 span,.detail2 .triangular,.numKill,.working,.context{
+	position: absolute;	
+}
+
+.bg{
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: .6;
+}
+.swiper-container{
+	width: 100%;
+	height: 100%;
+}
+.music{
+	width: 0.6rem;
+	height: 0.6rem;
+	right: 0.2rem;
+	top: 0.2rem;
+	background: url(../audio/music.svg) no-repeat;
+	z-index: 999;
+	background-size: 100% 100%;
+	opacity: 0;
+}
+.musicCur{
+	opacity: 1;	
+	-webkit-animation: move 1s linear infinite both;
+	animation: move 1s linear infinite both;
+}
+.slide h1{
+	left: 50%;
+	top: 50%;
+	width: 1rem;
+	height: 5.2rem;
+	margin-left: -0.5rem;
+	margin-top: -2.6rem;
+	font-size: 1rem;
+	color: #1fd471;
+	z-index: 10;
+	opacity: 0;
+}
+#page1 h1{
+	opacity: 1;
+	-webkit-animation: zoomInUp 2s linear 1 both;
+	animation: zoomInUp 2s linear 1 both;
+}
+
+.up{
+	display: block;
+	left: 50%;
+	bottom: 0.2rem;
+	width: 0.6rem;
+	height: 0.6rem;
+	margin-left: -0.3rem;
+	background: url(../img/arrow-up1.png) no-repeat;
+	background-size: 100% 100%;
+	z-index: 10;
+	opacity: 0;
+}
+.upCur{
+	opacity: 1;
+	transition: 2s;
+	animation: up 2s linear infinite both;
+}
+/*第二页*/
+.newIfy{
+	display: block;
+	border-bottom: 0.01rem solid #0df9b9;
+	width: 4.5rem;
+	height: 0.75rem;
+	top: 0.5rem;
+	left: 0.5rem;
+	line-height: 0.75rem;
+	padding: 0 0 0.03rem 0.5rem;
+	font-size: 0.36rem;
+	color: #0df9b9;
+	opacity: 0;
+	z-index: 1;
+}
+.about{
+	color: #0df9b9;
+	font-size: 0.36rem;
+	padding: 0 0 0 0.5rem;
+	top: 1.4rem;
+	left: 0.5rem;
+	font-style: normal;
+	opacity: 0;
+	z-index: 1;
+}
+.detail,.detail2{
+	top: 2.5rem;
+	width: 5rem;
+	left: 50%;
+	margin-left: -2.5rem;
+	z-index: 1;
+}
+.detail li,.detail2 li{
+	width: 100%;
+	height: .8rem;
+	line-height: .8rem;
+	font-size: .32rem;
+	margin: 0 auto;
+	margin-bottom: .3rem;
+	text-align: center;
+	color: #1fd471;
+	opacity: 0;
+}
+/*第三页*/
+.numKill{
+	width: 5rem;
+	height: 8rem;
+	left: 1.2rem;
+	top: 2.5rem;
+	z-index: 1;
+}
+.numKill .left{
+	width:1rem;
+	height:100%;
+	opacity: 0;
+	z-index: 1;
+}
+#page3 .left{
+	opacity: 1;
+	-webkit-animation: rollIn 2s 0s both;
+	animation: rollIn 2s 0s both;
+}
+.numKill .left div{
+	width:100%;
+	height:1rem;
+	line-height:1rem;
+	background: url("../img/icon-yuan.png") no-repeat;
+	background-size: cover;
+	color: #1fd471;
+	font-size:.28rem;
+	text-align: center;
+	margin-bottom: .6rem;
+}
+.numKill .right{
+	width:3.8rem;
+	height:100%;
+	opacity: 0;
+}
+#page3 .right{
+	opacity: 1;
+	-webkit-animation: rotateInDownRight 2s 0s both;
+	animation: rotateInDownRight 2s 0s both;
+}
+.numKill .right p{
+	width:100%;
+	height:1rem;
+	line-height:1rem;
+	color: #1fd471;
+	text-indent: .1rem;
+	font-size:.32rem;
+	margin-bottom:.6rem;
+}
+/*第四页 工作经验*/
+.working{
+	left: .6rem;
+	top: 2.4rem;
+	width: 5.2rem;
+	height: 8rem;
+	color: #1fd471;
+	font-size:.28rem;
+	z-index: 1;
+}
+.working div{
+	opacity: 0;
+}
+.working p{
+	width:100%;
+	height:.4rem;
+	line-height: .4rem;
+	text-align: center;
+	font-size:.32rem;
+}
+.working em{
+	display: block;
+	width:0;
+	height:0;
+	margin: .2rem 0 0 2.42rem;
+	border:8px solid transparent;
+	border-top-color: #0df9b9;
+	opacity: 0;
+}
+#page4 .working em:nth-of-type(1){
+	opacity: 1;
+	-webkit-animation: bounceInUp 3s 0s both;
+	animation: bounceInUp 3s 0s both;
+}
+#page4 .working em:nth-of-type(2){
+	opacity: 1;
+	-webkit-animation: bounceInUp 5s 0s both;
+	animation: bounceInUp 5s 0s both;
+}
+#page4 .working em:nth-of-type(3){
+	opacity: 1;
+	-webkit-animation: bounceInUp 7s 0s both;
+	animation: bounceInUp 7s 0s both;
+}
+#page4 .working em:nth-of-type(4){
+	opacity: 1;
+	-webkit-animation: bounceInUp 9s 0s both;
+	animation: bounceInUp 9s 0s both;
+}
+#page4 .working div:nth-of-type(1){
+	opacity: 1;
+	-webkit-animation: bounceInUp 2s 0s both;
+	animation: bounceInUp 2s 0s both;
+}
+#page4 .working div:nth-of-type(2){
+	opacity: 1;
+	-webkit-animation: bounceInUp 4s 0s both;
+	animation: bounceInUp 4s 0s both;
+}
+#page4 .working div:nth-of-type(3){
+	opacity: 1;
+	-webkit-animation: bounceInUp 6s 0s both;
+	animation: bounceInUp 6s 0s both;
+}
+#page4 .working div:nth-of-type(4){
+	opacity: 1;
+	-webkit-animation: bounceInUp 8s 0s both;
+	animation: bounceInUp 8s 0s both;
+}
+/*项目经验*/
+#page4 .detail2 li{
+	opacity: 1;
+	-webkit-animation: filpInY 2s 0s both;
+	animation: filpInY 2s 0s both;
+}
+/*联系方式*/
+.context{
+	top: 4rem;
+	left: 1.4rem;
+	width: 5rem;
+	height:4rem;
+	z-index: 1;
+}
+.context div{
+	width:100%;
+	height:.5rem;
+	line-height:.5rem;
+	vertical-align: middle;
+	color: #1fd471;
+	font-size: .32rem;
+	margin-bottom:.6rem;
+	opacity:0;
+}
+.context div i{
+	margin-right:.2rem;
+}
+.context .bg1 i{
+	display: inline-block;
+	width:.5rem;
+	height:100%;
+	background: url("../img/iphone.png") no-repeat;
+	background-size: cover;
+	vertical-align: middle;
+}
+.context .bg2 i{
+	display: inline-block;
+	width:.5rem;
+	height:100%;
+	background: url("../img/qq1.png") no-repeat;
+	background-size: cover;
+	vertical-align: middle;
+}
+.context .bg3 i{
+	display: inline-block;
+	width:.5rem;
+	height:100%;
+	background: url("../img/msg.png") no-repeat;
+	background-size: cover;
+	vertical-align: middle;
+}
+.context .bg4 i{
+	display: inline-block;
+	width:.5rem;
+	height:100%;
+	background: url("../img/mh.png") no-repeat;
+	background-size: cover;
+	vertical-align: middle;
+}
+#page5 .context div:nth-of-type(1){
+	opacity: 1;
+	-webkit-animation: bounceInLeft 2s 0s both;
+	animation: bounceInLeft 2s 0s both;
+}
+#page5 .context div:nth-of-type(2){
+	opacity: 1;
+	-webkit-animation: bounceInLeft 2s 0.5s both;
+	animation: bounceInLeft 2s 0.5s both;
+}
+#page5 .context div:nth-of-type(3){
+	opacity: 1;
+	-webkit-animation: bounceInLeft 2s 1s both;
+	animation: bounceInLeft 2s 1s both;
+}
+#page5 .context div:nth-of-type(4){
+	opacity: 1;
+	-webkit-animation: bounceInLeft 2s 1.5s both;
+	animation: bounceInLeft 2s 1.5s both;
+}
+/*从下往上出*/
+#page3 .cotton,#page4 .cotton{
+	opacity: 1;
+	-webkit-animation: rotateIn 2s 0s both;
+	animation: rotateIn 2s 0s both;
+}
+#page3 span:nth-child(1){
+	opacity: 1;
+	transition: 1s;
+	-webkit-animation: bounce 3s 0s both;
+	animation: bounce 3s 0s both;
+}
+#page3 span:nth-child(2){
+	opacity: 1;
+	transition: 2s;
+	-webkit-animation: bounce 4s 0s both;
+	animation: bounce 4s 0s both;
+}
+#page3 span:nth-child(3){
+	opacity: 1;
+	transition: 3s;
+	-webkit-animation: bounce 5s 0s both;
+	animation: bounce 5s 0s both;
+}
+#page3 span:nth-child(4){
+	opacity: 1;
+	transition: 4s;
+	-webkit-animation: bounce 6s 0s both;
+	animation: bounce 6s 0s both;
+}
+#page3 span:nth-child(5){
+	opacity: 1;
+	transition: 5s;
+	-webkit-animation: bounce 7s 0s both;
+	animation: bounce 7s 0s both;
+}
+/*信息从做左进*/
+#page2 h2,#page2 .about,#page3 h2,#page3 .about,#page4 h2,#page4 .about,#page5 h2,#page5 .about{
+	opacity: 1;
+	-webkit-animation: fadeInDown 1s 0s both;
+	animation: fadeInDown 1s 0s both;
+}
+#page2 li:nth-child(1){
+	opacity: 1;
+	-webkit-animation: bounceInLeft 1s 0.5s both;
+	animation: bounceInLeft 1s 0.5s both;
+}
+#page2 li:nth-child(2){
+	opacity: 1;
+	-webkit-animation: bounceInLeft 1s 1s both;
+	animation: bounceInLeft 1s 1s both;
+}
+#page2 li:nth-child(3){
+	opacity: 1;
+	-webkit-animation: bounceInLeft 1s 1.5s both;
+	animation: bounceInLeft 1s 1.5s both;
+}
+#page2 li:nth-child(4){
+	opacity: 1;
+	-webkit-animation: bounceInLeft 1s 2s both;
+	animation: bounceInLeft 1s 2s both;
+}
+#page2 li:nth-child(5){
+	opacity: 1;
+	-webkit-animation: bounceInLeft 1s 2.5s both;
+	animation: bounceInLeft 1s 2.5s both;
+}
+#page2 li:nth-child(6){
+	opacity: 1;
+	-webkit-animation: bounceInLeft 1s 3s both;
+	animation: bounceInLeft 1s 3s both;
+}
+#page2 li:nth-child(7){
+	opacity: 1;
+	-webkit-animation: bounceInLeft 1s 3.5s both;
+	animation: bounceInLeft 1s 3.5s both;
+}
+/*往上滑动*/
+@-webkit-keyframes up{
+	0%{
+		-webkit-transform: translateY(0rem);
+		transform: translateY(0rem);
+	}
+	50%{
+		-webkit-transform: translateY(-0.2rem);
+		transform: translateY(-0.2rem);
+	}
+	100%{
+		opacity: 0;
+	}
+}
+@keyframes up{
+	0%{
+		-webkit-transform: translateY(0rem);
+		transform: translateY(0rem);
+	}
+	50%{
+		-webkit-transform: translateY(-0.2rem);
+		transform: translateY(-0.2rem);
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+/*音乐按钮旋转*/
+@-webkit-keyframes move{
+	0%{
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes move{
+	0%{
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}

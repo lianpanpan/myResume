@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<title>XXX个人简历</title>
+<link rel="stylesheet" type="text/css" href="css/reset.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<script type="text/javascript">
+	//求各个移动端尺寸
+	var desW=640;
+	var winW=document.documentElement.clientWidth;
+	document.documentElement.style.fontSize=winW/desW*100+'px';
+</script>
+</head>
+<body>
+<section class="main">
+	<div class="music">
+		<audio src="audio/Delacey - Dream It Possible.mp3" loop prelod="none" id="musicId"></audio>
+	</div>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide slide">
+				<h1 class="title">个人简历</h1>
+				<section class="bg"></section>
+			</div>	
+			<div class="swiper-slide slide1">
+				<h2 class="newIfy">个人信息</h2>
+				<em class="about">ABOUT</em>
+				<ul class="detail" id="detail">
+					<li>姓名：廉盼盼</li>
+					<li>年龄：24</li>
+					<li>性别：前端妹子</li>
+					<li>学历：专科</li>
+					<li>应聘职位：web前端工程师</li>
+					<li>现所在地：北京市昌平区天通苑</li>
+				</ul>
+				<section class="bg"></section>
+			</div>	
+			<div class="swiper-slide slide">
+				<h2 class="newIfy">专业技能</h2>
+				<em class="about">KILL</em>
+				<div class="numKill">
+					<div class="left">
+						<div>
+							<span>HTML</span>
+						</div>
+						<div>
+							<span>H5</span>
+						</div>
+						<div>
+							<span>移动端</span>
+						</div>
+						<div>
+							<span>CSS3</span>
+						</div>
+						<div>
+							<span>PS</span>
+						</div>
+					</div>
+					<div class="right">
+						<p>100%还原UI设计稿</p>
+						<p>熟练掌握CSS3</p>
+						<p>有过开发经验</p>
+						<p>有过开发经验</p>
+						<p>熟练掌握</p>
+					</div>
+				</div>
+				<section class="bg"></section>
+			</div>
+			<div class="swiper-slide slide">
+				<h2 class="newIfy">项目经验</h2>
+				<em class="about">WORK EXPERIENCE</em>
+				<div class="working">
+					<div>
+						<p>2015</p>
+						<p>web手机站项目</p>
+						<p>m.gcwdq.com</p>
+						<p>m.369jk.com</p>
+					</div>
+					<em></em>
+					<div>
+						<p>2015</p>
+						<p>PC端项目多套</p>
+						<p>养生站、广场舞、麻小等</p>
+					</div>
+					<em></em>
+					<div>
+						<p>2016</p>
+						<p>手机APP</p>
+						<p>广场舞大全</p>
+					</div>
+					<em></em>
+					<div>
+						<p>2016年6月</p>
+						<p>微信端微商</p>
+						<p>麻小移动端</p>
+					</div>
+				</div>
+				<section class="bg"></section>
+			</div>
+			<div class="swiper-slide slide">
+				<h2 class="newIfy">联系方式</h2>
+				<em class="about">CONTACT</em>
+				<div class="context">
+					<div class="bg1"><i></i>15910350572</div>
+					<div class="bg2"><i></i>734236253</div>
+					<div class="bg3"><i></i>734236253@qq.com</div>
+					<div class="bg4"><i></i>本简历百分百真实</div>
+				</div>
+				<section class="bg"></section>
+			</div>
+		</div>
+	</div>
+	<i class="up"></i>
+</section>
+<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var mySelf=new Swiper('.swiper-container',{
+		direction:'vertical',
+		loop:true,
+		onTransitionEnd:function(swiper){
+			var slides=swiper.slides;//获取所有滑动页面
+			var curIndex=swiper.activeIndex;//当前滑块
+			//当添加三个内容滑块的时候，swiper会默认加上两个滑块，slides[0]是内容滑块的最后一个slides.length-1，是内容滑块的第一个
+			var lastIndexSlide=slides.length-1;//最后一个滑块()
+			var trueIndexSlide=slides.length-2;
+			[].forEach.call(slides,function(item,index){
+				item.id='';
+				if(curIndex==index){
+					switch(index){
+						case 0:
+							item.id='page'+trueIndexSlide;
+							break;
+						case lastIndexSlide:
+							item.id='page1';
+							break;
+						default:
+							item.id='page'+curIndex;
+							break;
+					}
+				}
+			})
+		}
+	});
+	//音乐按钮
+	var music=document.querySelector('.music');
+	var musicId=document.querySelector('#musicId');
+	var title=document.querySelector('.title');
+	var oUp=document.querySelector('.up');
+	window.setTimeout(function(){
+		musicId.play();
+//		musicId.addEventListener('canplay',function(){
+		music.className='music musicCur';
+		
+//		})
+		oUp.className='up upCur';
+	},1000);
+	music.addEventListener('click',function(){
+		if(musicId.paused){//musicId.paused=true;当前音乐为停止
+			musicId.play();
+			music.className='music musicCur';
+		}else{
+			musicId.pause();
+			music.className='music';
+			music.style.opacity=1;
+		}
+	},false)
+</script>
+
+</body>
+</html>
